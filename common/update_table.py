@@ -18,6 +18,7 @@ def update_table(nombre_bd,nombre_tabla):
             print("Conectado a database: ", record)
 
             ## Se actualizan los precios de la nueva semana
+            cursor.execute('SET FOREIGN_KEY_CHECKS=0;')
             print("Actualizando precios...")
             sql_1 = f'UPDATE precio INNER JOIN {nombre_tabla} ON (precio.IdProducto = {nombre_tabla}.IdProducto AND precio.IdSucursal = {nombre_tabla}.IdSucursal) SET precio.Precio = {nombre_tabla}.Precio;;'
             cursor.execute(sql_1)
@@ -25,6 +26,7 @@ def update_table(nombre_bd,nombre_tabla):
             print("Insertando nuevos productos...")
             sql_2 = f'INSERT into precio SELECT {nombre_tabla}.IdProducto,{nombre_tabla}.IdSucursal,{nombre_tabla}.Precio FROM {nombre_tabla} LEFT JOIN precio ON (precio.IdProducto = {nombre_tabla}.IdProducto AND precio.IdSucursal = {nombre_tabla}.IdSucursal) WHERE (precio.IdProducto IS NULL AND precio.IdSucursal IS NULL);'
             cursor.execute(sql_2)
+            cursor.execute('SET FOREIGN_KEY_CHECKS=1;')
             conn.commit()
     except Error as e:
         print("Error al conectar con MySQL", e)

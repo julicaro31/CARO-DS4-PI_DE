@@ -2,3 +2,4 @@
 private
 consigna.md
 .DS_Store
+common/__pycache__/*.pyc
