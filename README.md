@@ -6,7 +6,7 @@
 En este proyecto realizo un proceso de ETL (extract, transform and load) a partir de archivos que contienen infomación sobre los precios de productos de supermercados de distintas sucursales de Argentina en el año 2020.
 
 
-<img src="_src/ETL_process.jpg"  height="250">
+<img src="_src/ETL_process.jpg"  height="500">
 
 
 - Extract: Los archivos son descargados de internet. Estos contienen información de las sucursales, los productos y los precios para distintas semanas.
@@ -30,5 +30,5 @@ Finalmente se realizan las "cargas semanales" en orden cronológico. Utilizando 
 
 A continuación se encuentra el diagrama de entidad relacional (DER) de la base de datos.
 
-<img src="_src/DER.png"  height="250">
+<img src="_src/DER.png"  height="500">
 
