@@ -18,7 +18,7 @@ En este proyecto realizo un proceso de ETL (extract, transform and load) a parti
 
 ## Extract & Transform
 
-En el jupyter notebook **explicacion_ET.ipynb** se encuentran los pasos que seguí, el análisis y razonamiento para el tratamiento de los datos. Luego cree la función "transform" (se encuentra en common.transfom.py) para generalizar la transformación de cualquiera de los archivos.
+En el jupyter notebook **explicacion_ET.ipynb** se encuentran los pasos que seguí, el análisis y razonamiento para el tratamiento de los datos. Luego cree la función **transform** (se encuentra en common.transfom.py) para generalizar la transformación de cualquiera de los archivos.
 
 ## Load
 
